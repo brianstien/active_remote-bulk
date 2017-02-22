@@ -1,8 +1,8 @@
 # ActiveRemote::Bulk
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/active_remote/bulk`. To experiment with that code, run `bin/console` for an interactive prompt.
+Extracted from ActiveRemote
 
-TODO: Delete this and the text above, and describe your gem
+Implements methods for bulk creation, updating, and deletion of records
 
 ## Installation
 
@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Tag < ::ActiveRemote::Base
+end
+
+Tag.create_all(:name => "foo")
+Tag.update_all(:guid => "1234", :name => "bar")
+Tag.destroy_all(:guid => "1234")
+```
 
 ## Development
 
