@@ -1,7 +1,15 @@
-require "active_remote/bulk/version"
+# frozen_string_literal: true
+require 'active_remote/bulk/version'
+
+require 'active_remote'
+require 'active_remote/bulk/errors'
+require 'active_remote/bulk/persistence'
 
 module ActiveRemote
   module Bulk
-    # Your code goes here...
+  end
+
+  class Base
+    include ::ActiveRemote::Bulk::Persistence
   end
 end

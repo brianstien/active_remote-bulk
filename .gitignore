@@ -1,4 +1,5 @@
 /.bundle/
+/.ruby-*
 /.yardoc
 /Gemfile.lock
 /_yardoc/
